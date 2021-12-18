@@ -19,10 +19,10 @@ const typeDefs = gql `
     }
 
     input BookInput {
+        bookId: ID
         authors: [String]
         description: String
         title: String
-        bookId: ID
         image: String
         link: String
     }
@@ -38,4 +38,10 @@ const typeDefs = gql `
         token: ID!
         user: User
     }
+
+    type Query {
+        me: User
+    }
 `
+
+module.exports = typeDefs;
